@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Vargar Cigars</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="menu container">
+        <img class="logo" src="/images/logo.png" alt="" />
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="/images/menu-responsive.png" class="menu-icono" alt="" />
+        </label>
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contactos">Contactos</a></li>
+            {{#if user}}
+            <li><a href="/images/add">Agregar Evento</a></li>
+            <li><a href="/users/signup">Registrarse</a></li>
+            <li><a href="/users/logout">Cerrar Sesión</a></li>
+            {{else}}
+            <li><a href="/users/signin">Iniciar Sesión</a></li>
+            {{/if}}
+          </ul>
+        </nav>
+      </div>
+      
+      <div class="header-content container" id="inicio">
+          {{>errors}}
+          {{{body}}}
+        <div class="swiper mySwiper-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="slider-txt">
+                  <h1>Es el mas puro de todos</h1>
+                </div>
+                <div class="slider-img">
+                  <img src="/images/caja.png" alt="img" id="inicio-caja"/>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="slider-txt">
+                  <h1>Es el mas puro de todos</h1>
+                </div>
+                <div class="slider-img">
+                  <img src="/images/slide-inicio.png" alt="img" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="products" id="products">
+      <hr class="centered-line">
+      <h2>Productos</h2>
+      <div class="swiper mySwiper-2 container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product">
+              <img src="/images/Churchill.png" alt="" />
+              <div class="product-txt">
+                <h4>Churchill</h4>
+                <p>Puro calidad premium</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product">
+              <img src="/images/Corona.png" alt="" />
+              <div class="product-txt">
+                <h4>Corona</h4>
+                <p>Puro calidad premium</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product">
+              <img src="/images/Panetella.png" alt="" />
+              <div class="product-txt">
+                <h4>Panetella</h4>
+                <p>Puro calidad premium</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product">
+              <img src="/images/Robusto.png" alt="" />
+              <div class="product-txt">
+                <h4>Robusto</h4>
+                <p>Puro calidad premium</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product">
+              <img src="/images/Toro.png" alt="" />
+              <div class="product-txt">
+                <h4>Toro</h4>
+                <p>Puro calidad premium</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product">
+              <img src="/images/Torpedo.png" alt="" />
+              <div class="product-txt">
+                <h4>Torpedo</h4>
+                <p>Puro calidad premium</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div>
+        <button
+            class="btn btn-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#mi-modal"
+          >Realizar Pedidos</button>
+          <div class="modal" id="mi-modal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Realiza tus pedidos aqui</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form
+                    action="https://formsubmit.co/richardvargarcigars@gmail.com"
+                    method="POST"
+                  >
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        placeholder="Nombre y Apellido"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        name="telefono"
+                        placeholder="Numero de contacto"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <textarea
+                        class="form-control"
+                        name="comments"
+                        id="exampleTextarea"
+                        placeholder="Productos que desea adquirir"
+                        rows="3"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-outline-warning"
+                    >Enviar</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!--seccion de "nosotros" -->
+    <section class="nosotros" id="nosotros">
+      <div class="tabs container">
+        <input
+          type="radio"
+          name="tabs"
+          id="tab1"
+          checked="checked"
+          class="tabInput"
+          value="1"
+        />
+        <label for="tab1">Nosotros</label>
+        <div class="tab">
+          <div class="nosotros-txt container">
+            <h2>Nosotros</h2>
+            <p>
+              Somos mas <br />
+              <span>puros</span>
+            </p>
+          </div>
+          <!--Modal para "saber mas" -->
+          <div>
+          <button
+            class="btn btn-outline-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#mi-modal1"
+          >Saber mas</button>
+          <div class="modal" id="mi-modal1">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Acerca de nosotros</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true"></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="carouselExampleIndicators" class="carousel slide nosotros-img">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <center>
+                          <img src="/images/historia.png"  alt="...">
+                          </center>
+                        </div>
+                        <div class="carousel-item">
+                          <center>
+                          <img src="/images/mision.png"  alt="...">
+                          </center>
+                        </div>
+                        <div class="carousel-item">
+                          <center>
+                          <img src="/images/vision.png"  alt="...">
+                          </center>
+                        </div>
+                        <div class="carousel-item">
+                          <center>
+                          <img src="/images/valores.png"  alt="...">
+                          </center>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="event container">
+        <h2>Eventos</h2>
+        <div class="swiper mySwiper-4 container" id="swiper-4">
+  <div class="swiper-wrapper">
+      {{#each photos}}
+        <img src="{{imageURL}}" alt="" class="swiper-slide" id="event-img"/>
+      {{/each}}
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<style>
+    #swiper-4 {
+      width: 100%;
+      height: 70vh;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    #event-img {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 400px;
+    }
+    #event-img img {
+      display: block;
+      width: 100%;
+    }
+</style>
+        
+      </div>
+
+    </section>
+
+    <section class="horario" id="contacto">
+      <div class="horario-info container">
+        <h2>Contactos</h2>
+        <div class="horario-txt">
+          <div class="txt">
+            <h4>Direccion</h4>
+            <p>Calle Jose Fancisco Peña Gomez</p>
+            <p>Villa Carmen, Santo Domingo Este</p>
+          </div>
+          <div class="txt">
+            <h4>Horario</h4>
+            <p>Lunes a viernes : 9 am - 6 pm</p>
+            <p>Sabados : 9 am - 6 pm</p>
+          </div>
+          <div class="txt">
+            <h4>Telefonos</h4>
+            <p>809-316-0706</p>
+            <p>809-447-2950</p>
+          </div>
+          <div class="txt">
+            <h4>Redes Sociales</h4>
+            <div class="socials">
+              <a
+                href="https://www.instagram.com/cigarsrichvar/" target="_blank"
+              >
+                <div class="social">
+                  <img src="/images/Instagrams.svg" alt="IG" />
+                </div>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61550284567327&mibextid=LQQJ4d" target="_blank"
+              >
+                <div class="social">
+                  <img src="/images/facebooks.svg" alt="FB" />
+                </div>
+              </a>
+              <a href="https://wa.me/18093160706" target="_blank">
+                <div class="social whats-btn">
+                  <img src="/images/whatsapp-white.svg" alt="X" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer container">
+      <hr>
+      <div class="footer-txt">
+        <img src="/images/logo.png" alt="">
+        <p class="rnc">RNC: 1-32-97118-3</p>
+        <div class="links">
+          <ul class="foot-ul">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contactos">Contactos</a></li>
+          </ul>
+          <div class="social-footer">
+            <a href="https://www.instagram.com/cigarsrichvar/" target="_blank">
+              <img src="/images/s2.svg" alt="">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61550284567327&mibextid=LQQJ4d" target="_blank">
+              <img src="/images/s1.svg" alt="">
+            </a>
+            <a href="https://wa.me/18093160706" target="_blank">
+              <img src="/images/whatsapp-f.svg" alt="" style="height: 35px; width: 30px;">
+            </a>
+          </div>
+          <p>Copyright © Richard V. Cigars. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+   <!-- SCRIPT PARA LOS SLIDERS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
+   
+   <script>
+      var swiper = new Swiper(".mySwiper-1", {
+    effect: "cube",
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+      },
+      navigation: {
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+      }
+    });
+
+var swiper = new Swiper(".mySwiper-2", {
+    slidesPerView:4,
+    spaceBetween: 20,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView:1
+        },
+        520: {
+            slidesPerView:2
+        },
+        950: {
+            slidesPerView:3
+        }
+    }
+});
+
+ var swiper = new Swiper(".mySwiper-4", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+   </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+   
+    
+</body>
+</html>

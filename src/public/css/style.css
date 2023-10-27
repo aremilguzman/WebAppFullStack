@@ -1,0 +1,571 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600;700;800&family=Raleway:ital,wght@1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  body {
+    background-color: #141414;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* CSS PARA EL INICIO*/
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    font: size 18px;
+    background-color: #121418;
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-button-prev::after {
+    font-size: 25px;
+  }
+
+  .swiper-button-next::after {
+    font-size: 25px;
+  }
+
+  .swiper-button-next {
+    color: #edb40c;
+  }
+
+  .swiper-button-prev {
+    color: #edb40c;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #747474;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #edb312;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+
+  .logo {
+    width: 190px;
+  }
+
+  .menu .navbar ul li {
+    position: relative;
+    float: left;
+  }
+  
+  .menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #a1a1a1;
+    display: block;
+  }
+
+  .menu .navbar ul li a:hover {
+    color: rgba(255, 215, 0, 0.7)
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menu-icono {
+    width: 25px;
+  }
+
+  .menu label {
+    cursor: pointer;
+    display: none;
+  }
+
+  .header-content {
+    margin-top: 200px;
+    padding-bottom: 50px;
+  }
+  
+  .slider {
+    display: flex;
+    align-items: center;
+  }
+  .slider-txt {
+    margin-left: 85px;
+    width: 50%;
+  }
+  .slider-txt {
+    font: size 70px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  h1 {
+    flex: 1;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+    font-family: "Baskerville BT", serif;
+    line-height: 1.2;
+    margin: 0;
+    position: relative;
+    top: 25px;
+    filter: drop-shadow(6px 7px 2px rgba(0, 0, 0, 0.99));
+    margin-left: 78px;
+}
+.slider-img {
+  width: 50%;
+}
+.slider-img img {
+  margin-right: 200px;
+  width: 550px;
+}
+
+/* CSS PARA LOS PRODUCTOS*/
+.products{
+  padding-top: 100px;
+}
+.centered-line {
+  border: 1px solid #edb3129a;
+  margin: 0 auto;
+  width: 80%;
+
+}
+.products h2 {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  text-align: center;
+
+}
+.btn-danger {
+  margin-top: 20px;
+  margin-left: 10%;
+}
+.product img {
+    height: 250px;
+    align-items: center;
+}
+
+.product-txt {
+    margin-top: 25px;
+}
+
+.product-txt h4 {
+    color: rgba(255, 215, 0, 0.7);
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.product-txt p {
+    color: #a1a1a1;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+}
+
+/* CSS PARA NOSOTROS*/
+.nosotros {
+  padding: 80px 0px;
+  background-image: linear-gradient(rgba(20,20,20,1), rgba(20,20,20,0.9)), url(../images/nosotros1.jpeg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nosotros-txt h2 {
+  color: rgba(255, 215, 0, 0.7);
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+.nosotros-txt p {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+.nosotros-txt span {
+  color: rgba(255, 215, 0, 0.7);
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 0px;
+}
+
+.tabs label {
+  width: 15%;
+  order: 1;
+  display: block;
+  padding: 20px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background ease 0.2s;
+}
+
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding-top: 25px;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+.tabs input[type="radio"]:checked + label {
+  border-bottom: 2px solid rgba(255, 215, 0, 0.7);
+  color: #fff;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+}
+
+.nosotros-img img {
+  height: 450px;
+}
+
+/* CSS PARA EVENTOS */
+.events {
+  color: #ffffff;
+}
+.event h2 {
+  font-size: 45px;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#event-img img {
+  width: 40%;
+}
+
+/* CSS PARA CONTACTO */
+.horario {
+  padding: 100px 0px;
+  background-color: #121418;
+}
+
+.horario-info h2 {
+  font-size: 45px;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.horario-txt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.txt {
+  color: #ffffff;
+}
+
+.txt h4 {
+  font-size: 18px;
+  color: rgba(255, 215, 0, 0.7);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.txt p {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/*CSS de redes sociales*/
+.socials {
+  display: flex;
+}
+.social {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin: 0 10px;
+  height: 35px;
+  width: 35px;
+  border: 1px solid rgba(255, 215, 0, 0.7);
+  border-radius: 30%;
+}
+
+.social:hover {
+  background-color: rgba(255, 215, 0, 0.7);
+}
+
+.social img {
+  margin: auto;
+}
+
+.whats-btn {
+  text-align: center; 
+}
+
+/* CSS PARA EL FOOTER */
+hr {
+  border: 1px solid #edb3129a;
+}
+
+.footer-txt {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-txt img {
+  width: 190px;
+}
+.rnc {
+  color: #a1a1a1;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.links {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.links ul {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.links p {
+  color: #a1a1a1;
+  margin-top: 25px;
+}
+
+.links ul li a {
+  color: #a1a1a1;
+}
+
+.links ul li a:hover {
+  color: rgba(255, 215, 0, 0.7)
+}
+
+.social-footer {
+  margin-top: 30px;
+}
+
+
+.social-footer img {
+  width: 25px;
+  margin: 0 15px;
+}
+
+
+/* CSS RESPONSIVE */
+
+@media(max-width:991px) {
+
+  /* MENU RESPONSIVE */
+  .menu {
+    padding: 20px;
+    justify-content: space-between;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #181818;
+    display: none;
+  }
+  .menu .navbar ul li {
+    width: 100%;
+  }
+  .menu .navbar ul li a {
+    color: #ffffff;
+  }
+  .menu .navbar ul li a:hover {
+    color: rgba(255, 215, 0, 0.7);
+  }
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  /* INICIO RESPONSIVE */
+  .header-content {
+    padding: 30px;
+    margin-top: 70px;
+  }
+  .slider{
+    width: 40px;
+  }
+  .slider-txt {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .slider-txt h1 {
+    font-size: 30px;
+    position: absolute;
+    margin-bottom: 80px;
+  }
+  .slider-img {
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .slider-img img {
+    margin-right: 0px;
+    width: 300px;
+  }
+  #inicio-caja img {
+    width: 150px;
+    height: 200px;
+  }
+  .swipper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets,
+  .swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -7px;
+  }
+
+  /* PRODUCTOS RESPONSIVE */
+  .products {
+    padding: 100px 40px;
+  }
+  .products h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .product {
+    text-align: center;
+  }
+  .product img {
+    align-items: center;
+    width: 300px;
+    margin-right: 0;
+  }
+
+  /*NOSOTROS RESPONSIVE */
+  .tabs {
+    padding: 50px 30px;
+  }
+  .tabs label {
+    width: 33%;
+  }
+  
+  .nosotros-txt h2 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .nosotros-txt p {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .nosotros-txt span {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .nosotros-img {
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .nosotros-img img {
+    margin-right: 0px;
+    width: 350px;
+  }
+
+  /* CONTACTO RESPONSIVE */
+  .horario {
+    padding: 30px;
+    text-align: center;
+  }
+  .horario-info h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .horario-txt {
+    flex-direction: column;
+  }
+  .socials {
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
+  .social {
+    margin: 0 10px; /* Agrega espacio horizontal entre los íconos */
+  }
+
+
+  /* FOOTER RESPONSIVE */
+  .footer {
+    padding: 30px;
+    justify-content: center;
+  }
+  .links {
+    padding: 20px 0px;
+  }
+  .links ul {
+    flex-direction: column;
+    width: 200px;
+  }
+  .links ul li a {
+    align-items: center;
+    padding-left: 120px;
+    display: block;
+    margin-bottom: 15px;
+    
+  }
+}
+
+
+  .checkb {
+    display: none;
+  }
+
+  /* CSS DEL FORM */
+  
